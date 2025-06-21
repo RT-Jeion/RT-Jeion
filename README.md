@@ -1,12 +1,8 @@
-- 👋 Hi, I’m @RT-Jeion
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+- Yoo,  It's me RT Jeion
+- Full Name: Md. Rejuwan Tasfic Jeion 
+- Currently learning:Artificial Intelligence Engineering.
+- My Planned path is this field is
+- Short-Term -> ML Engineer,
+- Mid-Term   -> AI Architect,
+- Long Term   -> AI Researcher
 
-<!---
-RT-Jeion/RT-Jeion is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
