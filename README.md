@@ -54,7 +54,7 @@ I'm always open to connecting with like-minded professionals, builders, and rese
 - [X (Twitter)](https://x.com/RT_Jeion)  
 - [Facebook](https://linkedin.com/RT.Jeion001)  
 - [Telegram](https://web.telegram.org/k/#@RT_Jeion) 
-- [YouTube](https://youtube.com/RT_Jeion)
+- [YouTube](https://youtube.com/@RT_Jeion)
 ---
 
 ## 📌 Philosophy
