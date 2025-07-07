@@ -50,10 +50,10 @@ Each project I publish is built with clarity, rigor, and long-term maintainabili
 
 I'm always open to connecting with like-minded professionals, builders, and researchers in the AI/ML space. Feel free to reach out via:
 
-- [X (Twitter)](https://x.com/yourhandle)  
-- [LinkedIn](https://linkedin.com/in/yourprofile)  
-- [Personal Website](https://yourwebsite.com) *(if available)*  
-
+- [X (Twitter)](https://x.com/RT_Jeion)  
+- [Facebook](https://linkedin.com/RT.Jeion001)  
+- [Telegram](https://web.telegram.org/k/#@RT_Jeion) 
+- [YouTube](https://youtube.com/RT_Jeion)
 ---
 
 ## 📌 Philosophy
