@@ -1,4 +1,5 @@
-# 👋 Hi, I'm RT Bro
+#  Hi, I'm RT Jeion. 
+## Aspiring to Be a AI Engineer 
 
 Welcome to my GitHub profile. I'm a dedicated learner and builder with a strong focus on **AI Engineering**, **Systems Design**, and **Mathematical Foundations** for intelligent systems.
 
