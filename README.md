@@ -62,4 +62,4 @@ I'm always open to connecting with like-minded professionals, builders, and rese
 > "Systems outlast trends. Clarity beats complexity. Build like a leader, think like a scientist."
 
 Thanks for visiting.  
-Let’s build the future — one system at a time.
+Let’s build the future — one system at atime.
