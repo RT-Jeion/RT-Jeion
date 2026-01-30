@@ -12,9 +12,6 @@ I'm currently building my skill set across three key domains:
 - **Mathematics for Machine Learning** — Linear Algebra, Calculus, Probability, and Optimization  
 - **Python & ML Foundations** — Clean, production-ready code and real-world ML pipelines  
 - **Systems Thinking** — Scalable architectures and infrastructure for AI-driven applications  
-
-My goal is to grow from **Machine Learning Engineer** → **AI Architect** → **AI Researcher**, while building systems, not just solutions.
-
 ---
 
 ## 🧠 Technical Interests
@@ -30,8 +27,7 @@ My goal is to grow from **Machine Learning Engineer** → **AI Architect** → *
 ## 🛠 Tech Stack
 
 **Languages & Tools**  
-Python · NumPy · Pandas · Scikit-learn · PyTorch · TensorFlow  
-Git · Docker · Linux · Notion · Obsidian  
+Python · NumPy · Pandas · AI Automation 
 
 ---
 
@@ -51,11 +47,17 @@ Each project I publish is built with clarity, rigor, and long-term maintainabili
 
 I'm always open to connecting with like-minded professionals, builders, and researchers in the AI/ML space. Feel free to reach out via:
 
-- [X (Twitter)](https://x.com/RT_Jeion)  
-- [Facebook](https://facebook.com/RT.Jeion001)  
-- [Telegram](https://web.telegram.org/k/#@RT_Jeion) 
+- [X (Twitter)](https://x.com/RT_Jeion)
+- [Linkedin](www.linkedin.com/in/rt-jeion001)
+- [Facebook](https://facebook.com/RT.Jeion)
+- [Instragram](https://www.instagram.com/rt.jeion/)
 - [YouTube](https://youtube.com/@RT_Jeion)
+  
+Or Message me:
+- [Telegram](https://t.me/RT_Jeion)
+- [WhasApp](https://wa.me/qr/G7EMWZ22LUKTC10)
 ---
+
 
 ## 📌 Philosophy
 
