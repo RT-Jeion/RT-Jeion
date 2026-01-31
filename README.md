@@ -1,7 +1,13 @@
 #  Hi, I'm RT Jeion. 
 ## Aspiring to Be a AI Engineer 
+![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=RT-Jeion.RT-Jeion)
 
-Welcome to my GitHub profile. I'm a dedicated learner and builder with a strong focus on **AI Engineering**, **Systems Design**, and **Mathematical Foundations** for intelligent systems.
+
+ Welcome to my GitHub profile. 
+ 
+ MY Full name **Md. Rejuwan Tasfic Jeion**. You can call me **RT** or **Jeion**
+ 
+ I'm a dedicated learner and builder with a strong focus on **AI Engineering**, **Systems Design**, and **Mathematical Foundations** for intelligent systems.
 
 ---
 
