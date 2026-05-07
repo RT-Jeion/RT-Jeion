@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Quant & ML Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #eeeeee; }
+        
+        /* Custom Scrollbar for dark theme */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+        .card { background-color: #161616; border: 1px solid #2a2a2a; border-radius: 0.75rem; transition: border-color 0.2s ease; }
+        .card:hover { border-color: #4a4a4a; }
+        
+        /* Syllabus Badges */
+        .badge-must-know { background-color: #450a0a; color: #f87171; } /* Dark Red */
+        .badge-important { background-color: #0f172a; color: #60a5fa; } /* Dark Blue */
+        .badge-when-needed { background-color: #27272a; color: #a1a1aa; } /* Dark Gray */
+        .badge-both { background-color: #022c22; color: #34d399; } /* Dark Green */
+        .badge-qf { background-color: #431407; color: #fb923c; } /* Dark Orange */
+        .badge-ml { background-color: #2e1065; color: #a78bfa; } /* Dark Purple */
+
+        /* Library Levels */
+        .level-beg-int { background-color: #064e3b; color: #6ee7b7; }
+        .level-int { background-color: #1e3a8a; color: #93c5fd; }
+        .level-int-adv { background-color: #7f1d1d; color: #fca5a5; }
+        .level-adv { background-color: #713f12; color: #fde047; }
+        
+        .transition-all { transition: all 0.2s ease-in-out; }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto mb-10">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-zinc-800 pb-6">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold tracking-tight" id="mainTitle">Syllabus: Topics</h1>
+                <p class="text-sm text-zinc-400 mt-2" id="subTitle">Master the mathematical foundations</p>
+            </div>
+
+            <div class="bg-[#161616] p-1.5 rounded-lg flex border border-zinc-800 shadow-lg">
+                <button onclick="switchView('syllabus')" id="btn-syllabus" class="px-6 py-2.5 text-sm font-semibold rounded-md bg-[#2a2a2a] text-white transition-all shadow-sm">
+                    Syllabus (Topics)
+                </button>
+                <button onclick="switchView('library')" id="btn-library" class="px-6 py-2.5 text-sm font-semibold rounded-md text-zinc-500 hover:text-white transition-all">
+                    Library (Books)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto">
+        
+        <div id="view-syllabus" class="space-y-12">
+            
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-indigo-950 text-indigo-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">1 · Probability</span>
+                    <h2 class="text-lg font-semibold text-zinc-200">The language of uncertainty — start here</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Basic probability rules</h4><p class="text-[13px] text-zinc-400 mb-4">Sample space, events, P(A), union, intersection, complement, total probability</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Conditional probability & independence</h4><p class="text-[13px] text-zinc-400 mb-4">P(A|B), chain rule, independent vs correlated events</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Bayes' theorem</h4><p class="text-[13px] text-zinc-400 mb-4">Prior, likelihood, posterior — backbone of probabilistic ML and Bayesian forecasting</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Random variables</h4><p class="text-[13px] text-zinc-400 mb-4">Discrete vs continuous, PMF, PDF, CDF — asset returns are random variables</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Key distributions</h4><p class="text-[13px] text-zinc-400 mb-4">Gaussian, Log-normal, Bernoulli, Poisson, Student-t, Pareto (fat tails)</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Expectation, variance & covariance</h4><p class="text-[13px] text-zinc-400 mb-4">E[X], Var(X), Cov(X,Y) — portfolio risk lives here</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Joint & marginal distributions</h4><p class="text-[13px] text-zinc-400 mb-4">Joint PDF, marginalization — modeling multiple correlated assets</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">MLE & MAP estimation</h4><p class="text-[13px] text-zinc-400 mb-4">Fitting distributions to return data, calibrating models</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Information theory basics</h4><p class="text-[13px] text-zinc-400 mb-4">Entropy H(X), KL divergence, cross-entropy loss — used in ML models</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-ml uppercase">ML</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Fat tails, skewness & kurtosis</h4><p class="text-[13px] text-zinc-400 mb-4">Financial returns are non-Gaussian — tail risk, black swans</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Copulas & dependence</h4><p class="text-[13px] text-zinc-400 mb-4">Modeling non-linear dependence between assets beyond correlation</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">LLN & Central Limit Theorem</h4><p class="text-[13px] text-zinc-400 mb-4">Why averages converge; limits of Gaussian approximations in finance</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-emerald-950 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">2 · Statistics</span>
+                    <h2 class="text-lg font-semibold text-zinc-200">Tools for learning from data</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Descriptive statistics</h4><p class="text-[13px] text-zinc-400 mb-4">Mean, median, variance, std dev, skewness, kurtosis — summarizing return distributions</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Bias-variance tradeoff</h4><p class="text-[13px] text-zinc-400 mb-4">Underfitting vs overfitting — critical in both ML models and factor models</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Linear & multiple regression</h4><p class="text-[13px] text-zinc-400 mb-4">OLS, R², assumptions — foundation of factor models (CAPM, Fama-French)</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Hypothesis testing</h4><p class="text-[13px] text-zinc-400 mb-4">Null hypothesis, p-values, t-test — backtesting significance, A/B tests</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Time series statistics</h4><p class="text-[13px] text-zinc-400 mb-4">Stationarity, ACF/PACF, ARMA, GARCH — price and volatility modeling</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Correlation & covariance matrices</h4><p class="text-[13px] text-zinc-400 mb-4">Pearson r, covariance matrix — portfolio optimization and PCA</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Sampling & cross-validation</h4><p class="text-[13px] text-zinc-400 mb-4">Bootstrap, k-fold CV, walk-forward validation for time series</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Confidence intervals</h4><p class="text-[13px] text-zinc-400 mb-4">CI construction, interpreting backtest results, Sharpe ratio significance</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Regularization</h4><p class="text-[13px] text-zinc-400 mb-4">Ridge/Lasso, shrinkage estimators — combating overfitting in factor models</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">VaR & Expected Shortfall (CVaR)</h4><p class="text-[13px] text-zinc-400 mb-4">Quantile-based risk measures — industry standard for risk management</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">PCA & dimensionality reduction</h4><p class="text-[13px] text-zinc-400 mb-4">Eigenvectors, explained variance — statistical factor discovery</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Logistic regression & classification</h4><p class="text-[13px] text-zinc-400 mb-4">Binary outcomes, odds ratios — credit scoring, default prediction</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-orange-950 text-orange-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">3 · Quant Finance Core</span>
+                    <h2 class="text-lg font-semibold text-zinc-200">Probability & statistics as used in markets</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Stochastic processes</h4><p class="text-[13px] text-zinc-400 mb-4">Random walks, Brownian motion, Itô calculus — GBM for asset prices</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Return distributions & EMH</h4><p class="text-[13px] text-zinc-400 mb-4">Log returns, stylized facts, weak/semi-strong efficiency</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Volatility modeling</h4><p class="text-[13px] text-zinc-400 mb-4">Historical vol, implied vol, GARCH family, vol clustering</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Monte Carlo simulation</h4><p class="text-[13px] text-zinc-400 mb-4">Simulating paths, pricing derivatives, scenario analysis</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-must-know uppercase">must-know</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Backtesting & strategy evaluation</h4><p class="text-[13px] text-zinc-400 mb-4">Sharpe, Sortino, max drawdown, p-hacking, multiple testing problem</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Portfolio optimization</h4><p class="text-[13px] text-zinc-400 mb-4">Markowitz mean-variance, efficient frontier, Sharpe maximization</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-important uppercase">important</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-yellow-950 text-yellow-500 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">4 · Advanced</span>
+                    <h2 class="text-lg font-semibold text-zinc-200">Go deeper when you hit these in practice</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Bayesian inference & MCMC</h4><p class="text-[13px] text-zinc-400 mb-4">Full posterior, MCMC, VI — Bayesian portfolio models, uncertainty quantification</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-when-needed uppercase">when needed</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Hidden Markov Models</h4><p class="text-[13px] text-zinc-400 mb-4">Regime switching — bull/bear market detection, volatility regimes</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-when-needed uppercase">when needed</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Gaussian processes</h4><p class="text-[13px] text-zinc-400 mb-4">Non-parametric Bayesian; hyperparameter tuning, yield curve fitting</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-when-needed uppercase">when needed</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">EM algorithm & mixture models</h4><p class="text-[13px] text-zinc-400 mb-4">Latent variables, GMMs — regime modeling, clustering assets</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-when-needed uppercase">when needed</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Extreme value theory (EVT)</h4><p class="text-[13px] text-zinc-400 mb-4">GEV, GPD distributions — modeling crashes, stress testing beyond VaR</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-when-needed uppercase">when needed</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-qf uppercase">QF</span></div></div>
+                    <div class="card p-5"><h4 class="font-bold text-[15px] mb-1">Causal inference</h4><p class="text-[13px] text-zinc-400 mb-4">Confounders, do-calculus — separating alpha from spurious correlations</p><div class="flex gap-2"><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-when-needed uppercase">when needed</span><span class="text-[10px] font-bold px-2 py-0.5 rounded badge-both uppercase">Both</span></div></div>
+                </div>
+            </section>
+        </div>
+
+
+        <div id="view-library" class="hidden space-y-12" >
+            </div>
+
+    </div>
+
+    <script>
+        // Full data extraction from syllabus_books.jsx
+        const libraryData = [
+          {
+            id: "prob", badge: "1 · Probability", title: "The language of uncertainty — start here", theme: "text-indigo-400",
+            books: [
+              { title: "Introduction to Probability", authors: "Blitzstein & Hwang", why: "The single best probability book for ML/QF. Crystal-clear derivations, intuition-first, covers Bayes deeply. Free PDF available.", covers: ["Bayes' theorem", "Random variables", "Key distributions", "Expectation & variance", "LLN & CLT"], level: "Beginner–Intermediate", stars: "★★★☆", css: "level-beg-int", link: "https://projects.iq.harvard.edu/stat110" },
+              { title: "Probability Theory: The Logic of Science", authors: "E.T. Jaynes", why: "The definitive Bayesian probability text. Connects probability directly to inference and scientific reasoning. Dense but transformative.", covers: ["Bayes' theorem", "MLE & MAP", "Fat tails & heavy priors", "Information theory"], level: "Advanced", stars: "★★★★", css: "level-adv" },
+              { title: "Elementary Probability for Applications", authors: "Rick Durrett", why: "Concise and rigorous. Great for joint distributions, copulas, and stochastic foundations before moving to finance.", covers: ["Joint & marginal distributions", "Conditional probability", "Copulas & dependence"], level: "Intermediate", stars: "★★☆☆", css: "level-int" },
+              { title: "Information Theory, Inference & Learning Algorithms", authors: "David MacKay", why: "Free online. Uniquely ties information theory to ML. Best source for entropy, KL divergence, and cross-entropy intuition.", covers: ["Information theory basics", "MLE & MAP", "Bayesian inference"], level: "Intermediate–Advanced", stars: "★★★☆", css: "level-int-adv", link: "https://www.inference.org.uk/itila/" }
+            ]
+          },
+          {
+            id: "stat", badge: "2 · Statistics", title: "Tools for learning from data", theme: "text-emerald-400",
+            books: [
+              { title: "The Elements of Statistical Learning", authors: "Hastie, Tibshirani & Friedman", why: "The ML statistics bible. Covers regression, regularization, PCA, bias-variance, and classification with full mathematical rigour. Free PDF.", covers: ["Bias-variance tradeoff", "Linear & multiple regression", "Regularization", "PCA & dimensionality reduction", "Logistic regression"], level: "Intermediate–Advanced", stars: "★★★☆", css: "level-int-adv", link: "https://hastie.su.domains/ElemStatLearn/" },
+              { title: "All of Statistics", authors: "Larry Wasserman", why: "A condensed powerhouse. Covers hypothesis testing, confidence intervals, regression, and nonparametric methods — perfect bridge between probability and ML.", covers: ["Hypothesis testing", "Confidence intervals", "Sampling & cross-validation", "Descriptive statistics"], level: "Intermediate", stars: "★★☆☆", css: "level-int" },
+              { title: "Statistics for Finance", authors: "Erik Lindström et al.", why: "Tailored to financial data: return distributions, VaR, CVaR, time series, and volatility — all with statistical rigour.", covers: ["VaR & Expected Shortfall", "Time series statistics", "Return distributions", "Correlation & covariance matrices"], level: "Intermediate", stars: "★★☆☆", css: "level-int" },
+              { title: "Statistical Inference", authors: "Casella & Berger", why: "The graduate-level statistics reference. Rigorous treatment of estimation theory, hypothesis testing, and confidence intervals from first principles.", covers: ["Hypothesis testing", "Confidence intervals", "Descriptive statistics", "MLE & MAP"], level: "Advanced", stars: "★★★★", css: "level-adv" }
+            ]
+          },
+          {
+            id: "quant", badge: "3 · Quant Finance Core", title: "Probability & statistics as used in markets", theme: "text-orange-400",
+            books: [
+              { title: "Options, Futures, and Other Derivatives", authors: "John C. Hull", why: "The quant finance bible. Covers GBM, stochastic processes, Monte Carlo, and derivatives pricing with accessible math.", covers: ["Stochastic processes", "Monte Carlo simulation", "Return distributions & EMH", "Volatility modeling"], level: "Beginner–Intermediate", stars: "★★★☆", css: "level-beg-int" },
+              { title: "Quantitative Risk Management", authors: "McNeil, Frey & Embrechts", why: "The definitive risk textbook. Deep coverage of VaR, CVaR, copulas, extreme value theory, and GARCH. Essential for risk desks.", covers: ["VaR & Expected Shortfall", "Copulas & dependence", "Volatility modeling", "Extreme value theory"], level: "Advanced", stars: "★★★★", css: "level-adv" },
+              { title: "Active Portfolio Management", authors: "Grinold & Kahn", why: "The statistical foundation of systematic investing. Covers portfolio optimization, factor models, information ratio, and Sharpe analysis.", covers: ["Portfolio optimization", "Backtesting & strategy evaluation", "Correlation & covariance matrices"], level: "Intermediate–Advanced", stars: "★★★☆", css: "level-int-adv" },
+              { title: "Analysis of Financial Time Series", authors: "Ruey S. Tsay", why: "The go-to reference for financial time series. ARMA, GARCH, stationarity, volatility clustering — all with real financial data examples.", covers: ["Time series statistics", "Volatility modeling", "Return distributions & EMH"], level: "Intermediate", stars: "★★☆☆", css: "level-int" }
+            ]
+          },
+          {
+            id: "adv", badge: "4 · Advanced", title: "Go deeper when you hit these in practice", theme: "text-yellow-500",
+            books: [
+              { title: "Pattern Recognition and Machine Learning", authors: "Christopher Bishop", why: "The Bayesian ML textbook. Deep dives into Gaussian processes, EM algorithm, mixture models, and variational inference with elegant math.", covers: ["Bayesian inference & MCMC", "Gaussian processes", "EM algorithm & mixture models"], level: "Advanced", stars: "★★★★", css: "level-adv" },
+              { title: "Stochastic Calculus for Finance I & II", authors: "Steven Shreve", why: "The mathematical foundation of quantitative finance. Rigorous treatment of Brownian motion, Itô calculus, and martingales.", covers: ["Stochastic processes", "Hidden Markov Models", "Extreme value theory"], level: "Advanced", stars: "★★★★", css: "level-adv" },
+              { title: "Causal Inference: The Mixtape", authors: "Scott Cunningham", why: "Accessible and practical. Covers potential outcomes, DAGs, difference-in-differences. Free online. Bridges stats and causal reasoning.", covers: ["Causal inference"], level: "Intermediate", stars: "★★☆☆", css: "level-int", link: "https://mixtape.scunning.com/" },
+              { title: "Machine Learning: A Probabilistic Perspective", authors: "Kevin Murphy", why: "Encyclopedic probabilistic ML reference. Covers HMMs, Gaussian processes, Bayesian methods, and Monte Carlo in one massive volume.", covers: ["Bayesian inference & MCMC", "Hidden Markov Models", "Gaussian processes", "EM algorithm & mixture models"], level: "Advanced", stars: "★★★★", css: "level-adv" }
+            ]
+          }
+        ];
+
+        // Render Library Data into DOM
+        const libraryContainer = document.getElementById('view-library');
+        let html = '';
+        libraryData.forEach(section => {
+            html += `
+            <section>
+                <div class="flex flex-col md:flex-row md:items-center gap-3 mb-6">
+                    <span class="text-xs font-bold uppercase tracking-wider ${section.theme}">${section.badge}</span>
+                    <h2 class="text-lg font-semibold text-zinc-200">${section.title}</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            `;
+            section.books.forEach(book => {
+                let tags = book.covers.map(t => `<span class="bg-zinc-800 text-zinc-300 text-[10px] px-2 py-0.5 rounded-full whitespace-nowrap">${t}</span>`).join('');
+                let linkHTML = book.link ? `<a href="${book.link}" target="_blank" class="text-[10px] text-blue-400 hover:underline z-10" onclick="event.stopPropagation()">Free ↗</a>` : '';
+                
+                html += `
+                <div class="card p-4 cursor-pointer relative" onclick="toggleAccordion(this)">
+                    <div class="flex justify-between items-start gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[14px] font-bold text-zinc-100 leading-tight mb-1">${book.title}</h3>
+                            <p class="text-[12px] text-zinc-500 mb-3">${book.authors}</p>
+                            <div class="flex items-center flex-wrap gap-2">
+                                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${book.css}">${book.level}</span>
+                                <span class="text-[11px] tracking-widest text-[#C09020]">${book.stars}</span>
+                                ${linkHTML}
+                            </div>
+                        </div>
+                        <span class="text-zinc-600 text-xs chevron mt-1 transition-transform duration-200">▼</span>
+                    </div>
+                    
+                    <div class="hidden-content hidden mt-4 pt-4 border-t border-zinc-800">
+                        <p class="text-[12px] text-zinc-400 leading-relaxed mb-4">${book.why}</p>
+                        <div class="text-[10px] font-bold text-zinc-600 uppercase mb-2">Covers in Syllabus:</div>
+                        <div class="flex flex-wrap gap-1.5">${tags}</div>
+                    </div>
+                </div>
+                `;
+            });
+            html += `</div></section>`;
+        });
+        libraryContainer.innerHTML = html;
+
+        // Interactive Functions
+        function switchView(view) {
+            const sylView = document.getElementById('view-syllabus');
+            const libView = document.getElementById('view-library');
+            const btnSyl = document.getElementById('btn-syllabus');
+            const btnLib = document.getElementById('btn-library');
+            const title = document.getElementById('mainTitle');
+            const subtitle = document.getElementById('subTitle');
+
+            if (view === 'syllabus') {
+                sylView.classList.remove('hidden');
+                libView.classList.add('hidden');
+                
+                // Active styling
+                btnSyl.className = 'px-6 py-2.5 text-sm font-semibold rounded-md bg-[#2a2a2a] text-white transition-all shadow-sm';
+                btnLib.className = 'px-6 py-2.5 text-sm font-semibold rounded-md text-zinc-500 hover:text-white transition-all';
+                
+                title.innerText = "Syllabus: Topics";
+                subtitle.innerText = "Master the mathematical foundations";
+            } else {
+                sylView.classList.add('hidden');
+                libView.classList.remove('hidden');
+                
+                // Active styling
+                btnLib.className = 'px-6 py-2.5 text-sm font-semibold rounded-md bg-[#2a2a2a] text-white transition-all shadow-sm';
+                btnSyl.className = 'px-6 py-2.5 text-sm font-semibold rounded-md text-zinc-500 hover:text-white transition-all';
+                
+                title.innerText = "Library: Recommended Books";
+                subtitle.innerText = "Deep dives and references for the syllabus";
+            }
+        }
+
+        function toggleAccordion(card) {
+            const content = card.querySelector('.hidden-content');
+            const chevron = card.querySelector('.chevron');
+            
+            if(content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                chevron.innerText = '▲';
+                card.style.borderColor = '#4a4a4a'; // Keep highlight border while open
+            } else {
+                content.classList.add('hidden');
+                chevron.innerText = '▼';
+                card.style.borderColor = '#2a2a2a'; 
+            }
+        }
+    </script>
+</body>
+</html>
