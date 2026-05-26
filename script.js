@@ -83,3 +83,14 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// ── Reach link click: smooth scroll + reveal all links panel
+const reachLink = document.getElementById('reach-link');
+const allLinksPanel = document.getElementById('all-links-panel');
+if (reachLink && allLinksPanel) {
+  reachLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    allLinksPanel.classList.add('visible');
+    allLinksPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}

@@ -622,6 +622,56 @@ section {
   line-height: 1.8;
 }
 
+/* Contact core three blocks */
+.contact-core {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+.core-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  height: 80px;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--muted);
+}
+.contact-core .core-cell:first-child { border-left: none; }
+.platform-label { font-size:9px; text-transform:uppercase; color:var(--muted); letter-spacing:0.12em; }
+.platform-handle { font-size:13px; color:var(--green); margin-top:6px; font-weight:600; }
+.platform-arrow { margin-top:6px; color: rgba(74,222,128,0.25); transition: transform 0.18s, opacity 0.18s; opacity:0.6; }
+.core-cell:hover { background: var(--surface2); }
+.core-cell:hover .platform-handle { color: var(--green); }
+.core-cell:hover .platform-arrow { transform: translateX(6px); opacity:1; }
+
+/* Reach line */
+.reach-line { display:inline-block; color:var(--muted); text-decoration:none; font-size:10px; text-transform:uppercase; letter-spacing:0.12em; }
+.reach-line:hover { color:var(--green); }
+
+/* All links panel */
+.all-links-panel { max-width: 820px; margin: 0 auto; }
+.all-links-label { font-size:9px; text-transform:uppercase; color:var(--muted); letter-spacing:0.12em; margin-bottom:0.6rem; }
+.all-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:0; border:1px solid var(--border); overflow:hidden; }
+.all-cell { display:flex; flex-direction:column; justify-content:center; padding:0.6rem 0.9rem; height:56px; border-left:1px solid var(--border); border-top:1px solid var(--border); text-decoration:none; color:var(--muted); background:var(--surface); }
+.all-grid .all-cell:first-child, .all-grid .all-cell:nth-child(4), .all-grid .all-cell:nth-child(7) { border-left: none; }
+.cell-label { font-size:9px; text-transform:uppercase; color:var(--muted); letter-spacing:0.12em; }
+.cell-value { font-size:11px; color:var(--mid); margin-top:4px; }
+
+.recruiter-note { margin-top:1rem; padding:0.8rem 0.8rem; border-left:2px solid var(--border); color:var(--muted); font-size:11px; }
+
+@media (max-width: 768px) {
+  .contact-core { grid-template-columns: 1fr; }
+  .all-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 .contact-main-links {
   display: flex;
   justify-content: center;
