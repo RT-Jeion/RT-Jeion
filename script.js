@@ -12,7 +12,7 @@ document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; })
   ring.style.top    = ry - 18 + 'px';
   requestAnimationFrame(animCursor);
 })();
-document.querySelectorAll('a, button, .tag, .social-btn, .hero-social-link').forEach(el => {
+document.querySelectorAll('a, button, .tag, .hero-social-link, .contact-link, .btn-scroll').forEach(el => {
   el.addEventListener('mouseenter', () => { ring.style.width = '56px'; ring.style.height = '56px'; ring.style.borderColor = 'var(--accent)'; });
   el.addEventListener('mouseleave', () => { ring.style.width = '36px'; ring.style.height = '36px'; ring.style.borderColor = 'var(--accent-glow)'; });
 });
@@ -84,13 +84,13 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// ── Reach link click: smooth scroll + reveal all links panel
-const reachLink = document.getElementById('reach-link');
-const allLinksPanel = document.getElementById('all-links-panel');
-if (reachLink && allLinksPanel) {
-  reachLink.addEventListener('click', (e) => {
+// ── Smooth scroll for the contact CTA
+document.querySelectorAll('[data-scroll-target]').forEach(trigger => {
+  trigger.addEventListener('click', (e) => {
+    const targetSelector = trigger.getAttribute('data-scroll-target');
+    const target = targetSelector ? document.querySelector(targetSelector) : null;
+    if (!target) return;
     e.preventDefault();
-    allLinksPanel.classList.add('visible');
-    allLinksPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
-}
+});
