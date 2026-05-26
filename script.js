@@ -17,30 +17,40 @@ document.querySelectorAll('a, button, .tag, .social-btn, .hero-social-link').for
   el.addEventListener('mouseleave', () => { ring.style.width = '36px'; ring.style.height = '36px'; ring.style.borderColor = 'var(--accent-glow)'; });
 });
 
-// ── Typing animation
+// ── Typing animation (per spec)
 const phrases = [
-  "Building at the intersection of AI, Math & Markets.",
-  "LLM Engineer in progress.",
-  "Builder. Not job seeker.",
-  "Going deep on the math that runs the future.",
-  "Making things that think.",
+  "building llm from scratch...",
+  "researching quant strategies...",
+  "focus = \"build, not get hired\"",
 ];
-let pi = 0, ci = 0, deleting = false, wait = 0;
+const typingSpeed = 55; // ms per char
+const deletingSpeed = 28; // ms per char
+const pauseAtEnd = 2000; // ms pause when line complete
+let pi = 0, ci = 0, deleting = false;
 const typed = document.getElementById('typed');
-function type() {
+function typeLoop() {
   const phrase = phrases[pi];
-  if (wait > 0) { wait--; setTimeout(type, 80); return; }
   if (!deleting) {
-    typed.textContent = phrase.slice(0, ++ci);
-    if (ci === phrase.length) { deleting = true; wait = 30; }
-    setTimeout(type, 55);
+    ci++;
+    typed.textContent = phrase.slice(0, ci);
+    if (ci >= phrase.length) {
+      setTimeout(() => { deleting = true; setTimeout(typeLoop, deletingSpeed); }, pauseAtEnd);
+      return;
+    }
+    setTimeout(typeLoop, typingSpeed);
   } else {
-    typed.textContent = phrase.slice(0, --ci);
-    if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
-    setTimeout(type, 28);
+    ci--;
+    typed.textContent = phrase.slice(0, ci);
+    if (ci <= 0) {
+      deleting = false;
+      pi = (pi + 1) % phrases.length;
+      setTimeout(typeLoop, typingSpeed);
+      return;
+    }
+    setTimeout(typeLoop, deletingSpeed);
   }
 }
-type();
+typeLoop();
 
 // ── Scroll reveal
 const observer = new IntersectionObserver((entries) => {
@@ -62,9 +72,14 @@ const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    const rect = s.getBoundingClientRect();
+    if (rect.top <= 120 && rect.bottom > 120) current = s.id;
   });
   navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';
+    const href = a.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const id = href.slice(1);
+      if (id === current) a.classList.add('active'); else a.classList.remove('active');
+    }
   });
 });
